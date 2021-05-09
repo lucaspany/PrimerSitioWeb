@@ -1,0 +1,244 @@
+@use '../variables/variables' as *;
+
+// -------------HERO-------------------
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: calc(100vh - 7.4rem);
+
+  background-image: url("../../../assets/img/bigua_hero.jpg");
+  //background-position: -50rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    display: flex;
+    max-width: 40%;
+    flex-direction: column;
+    margin-left: 10rem;
+
+    &--title {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 7rem;
+    }
+
+    &--description {
+      text-align: justify;
+      font-size: 2.8rem;
+      padding: 3rem;
+    }
+  }
+}
+
+// -------------HABITACIONES - INFO------------------------------
+
+.info {
+  &__container {
+    background-color: $white;
+    color: $black;
+  }
+
+  padding: 5rem 0;
+
+  display: flex;
+  gap: 5rem;
+
+  &__left {
+    &--img {
+      background-image: url("../../../assets/img/Habitaciones.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 50rem;
+      height: 50rem;
+      border-radius: 10rem 0 10rem 0;
+    }
+  }
+
+  &__right {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    &--title {
+      font-size: 4rem;
+      color: $dorado;
+      text-align: center;
+    }
+    &--text {
+      //width: 80%;
+      text-align: justify;
+      font-size: 2.5rem;
+      line-height: 2;
+      color: $background-color-2;
+    }
+  }
+}
+
+// -------------EVENTOS - INFO------------------------------
+.eventos {
+  &__container {
+    position: relative;
+    background-image: url("../../../../assets/img/casamiento.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    padding: 2.5rem 0;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+    zoom: 1;
+    &:hover {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      zoom: 1;
+    }
+  }
+
+  &__right {
+    padding-right: 40rem;
+    &--title {
+      font-size: 4rem;
+      color: $dorado;
+      text-align: left;
+    }
+    &--subtitle {
+      font-size: 5rem;
+      color: $background-color-2;
+      text-align: left;
+    }
+    &--text {
+      font-size: 2rem;
+      text-align: justify;
+      line-height: 2;
+      color: $white;
+    }
+  }
+}
+
+// -------------DIA DE CAMPO - INFO------------------------------
+.campo {
+  &__container {
+    background-color: $white;
+    color: $black;
+  }
+
+  padding: 5rem 0;
+  display: flex;
+  gap: 5rem;
+
+  &__left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--img {
+      background-image: url("../../../../assets/img/diacampo.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 50rem;
+      height: 50rem;
+      border-radius: 10rem 0 10rem 0;
+    }
+  }
+
+  &__right {
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+    &--title {
+      font-size: 4rem;
+      color: $dorado;
+      text-align: center;
+    }
+    &--text {
+      //width: 80%;
+      text-align: justify;
+      font-size: 2.5rem;
+      line-height: 2;
+      color: $background-color-2;
+    }
+  }
+}
+
+// -------------TESTIMONIALES - INFO------------------------------
+.testimonials {
+  min-height: 100vh;
+  background-color: #000000;
+  float: left;
+  width: 100%;
+  padding: 100px 15px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.testimonials .title {
+  margin-bottom: 60px;
+}
+.testimonials .title h1 {
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 36px;
+  margin: 0;
+}
+
+.testimonials .slider {
+  border: 1px solid #333333;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+}
+.testimonials .slider .slide {
+  display: none;
+}
+.testimonials .slider .slide.active {
+  display: block;
+  animation: slide 1s ease;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.testimonials .slider p {
+  font-size: 18px;
+  color: #ffffff;
+  word-spacing: 2px;
+}
+.testimonials .slider .client-info h3 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+  margin: 30px 0 10px;
+}
+.testimonials .slider .client-info span {
+  display: block;
+  font-size: 16px;
+  color: #11bead;
+}
+.testimonials .slider-indicator {
+  text-align: center;
+  padding-top: 30px;
+}
+.testimonials .slider-indicator img {
+  max-height: 80px;
+  max-width: 80px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 8px;
+  opacity: 0.2;
+  border: 4px solid #fff;
+  cursor: pointer;
+  transition: opacity 1s ease;
+}
+.testimonials .slider-indicator img.active {
+  opacity: 1;
+}
