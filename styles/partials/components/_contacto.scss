@@ -1,0 +1,110 @@
+@use '../variables/variables' as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffff;
+  overflow-x: hidden;
+}
+
+.formulario__container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/img/instalacion_hero.jpg);
+
+  color: $white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  padding: 10px 30px 250px 30px;
+}
+
+.formulario__left {
+  width: 500px;
+  padding: 5px 5px 90px;
+  display: block;
+  border-radius: 10px;
+  margin: 0 10px;
+  border-color: rgba(14, 11, 10, 0.233);
+  box-shadow: rgb(128 128 128) 0px 2px 8px 0px;
+  border-width: 2px;
+  border-style: solid;
+  background-color: none;
+  flex-wrap: wrap;
+  box-sizing: content-box;
+}
+
+.wrapper {
+  background-color: none;
+  margin-top: 15px;
+  width: 100%;
+  height: 35rem;
+  box-sizing: border-box;
+  padding: 10px 90px 0px 1px;
+
+  &--title {
+    font-size: 3rem;
+  }
+}
+
+.myform {
+  width: 120%;
+  background-color: none;
+  opacity: 0.8;
+  margin-bottom: 26px;
+  font-size: 28px;
+}
+
+input,
+textarea {
+  width: 100%;
+  height: 2em;
+  flex-wrap: wrap;
+  resize: none;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+textarea {
+  height: 8em;
+}
+
+.btn input[type="submit"] {
+  border: 0px;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+  background: #fece0c;
+  color: #332902;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#error_message {
+  background: #fe8b8e;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  width: 55rem;
+}
+
+.formulario__right--title {
+  font-size: 9rem;
+  text-shadow: $black;
+  text-align: center;
+}
+.formulario__right--text {
+  padding: 2rem;
+  text-align: justify;
+  font-size: 2.5rem;
+  line-height: 2;
+}

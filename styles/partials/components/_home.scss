@@ -8,7 +8,7 @@
   align-items: center;
   height: calc(100vh - 7.4rem);
 
-  background-image: url("../../../assets/img/bigua_hero.jpg");
+  background-image: url("/assets/img/bigua_hero.jpg");
   //background-position: -50rem 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,8 +20,10 @@
     margin-left: 10rem;
 
     &--title {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      //font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       font-size: 7rem;
+      text-shadow: $shadow3;
     }
 
     &--description {
@@ -47,7 +49,7 @@
 
   &__left {
     &--img {
-      background-image: url("../../../assets/img/Habitaciones.jpg");
+      background-image: url("/assets/img/Habitaciones.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       width: 50rem;
@@ -62,6 +64,7 @@
     //align-items: center;
     &--title {
       font-size: 4rem;
+      text-shadow: $shadow2;
       color: $dorado;
       text-align: center;
     }
@@ -79,7 +82,7 @@
 .eventos {
   &__container {
     position: relative;
-    background-image: url("../../../../assets/img/casamiento.jpg");
+    background-image: url("/assets/img/casamiento.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -95,11 +98,12 @@
     }
   }
 
-  &__right {
+  &__left {
     padding-right: 40rem;
     &--title {
       font-size: 4rem;
       color: $dorado;
+      text-shadow: $shadow2;
       text-align: left;
     }
     &--subtitle {
@@ -108,10 +112,12 @@
       text-align: left;
     }
     &--text {
-      font-size: 2rem;
+      font-size: 0.5rem;
+      font-weight: bold;
       text-align: justify;
       line-height: 2;
       color: $white;
+      text-shadow: $shadow;
     }
   }
 }
@@ -132,12 +138,12 @@
     justify-content: center;
     align-items: center;
     &--img {
-      background-image: url("../../../../assets/img/diacampo.jpg");
+      background-image: url("/assets/img/diacampo.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      width: 50rem;
-      height: 50rem;
-      border-radius: 10rem 0 10rem 0;
+      width: 60rem;
+      height: 100rem;
+      border-radius: 5rem;
     }
   }
 
@@ -148,6 +154,7 @@
     &--title {
       font-size: 4rem;
       color: $dorado;
+      text-shadow: $shadow2;
       text-align: center;
     }
     &--text {
@@ -178,9 +185,11 @@
 }
 .testimonials .title h1 {
   text-align: center;
-  color: #ffffff;
+  color: $white2;
   text-transform: uppercase;
+  font-family: garamond;
   font-size: 36px;
+  color: #11bead;
   margin: 0;
 }
 
@@ -210,12 +219,13 @@
 }
 .testimonials .slider p {
   font-size: 18px;
-  color: #ffffff;
+  color: $white2;
+  font-style: oblique;
   word-spacing: 2px;
 }
 .testimonials .slider .client-info h3 {
   font-weight: bold;
-  color: #fff;
+  color: $white;
   font-size: 18px;
   margin: 30px 0 10px;
 }
@@ -235,10 +245,73 @@
   display: inline-block;
   margin: 0 8px;
   opacity: 0.2;
-  border: 4px solid #fff;
+  border: 4px solid $white;
   cursor: pointer;
   transition: opacity 1s ease;
 }
 .testimonials .slider-indicator img.active {
   opacity: 1;
+}
+
+// -------------GO TOP-------------------------
+
+.go-top-container {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 6.6rem;
+  height: 6.6;
+  z-index: -1;
+}
+
+.go-top-button {
+  width: 0rem;
+  height: 0rem;
+  background: $background-color-2;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.go-top-button i {
+  position: absolute;
+  font-size: 1.7rem;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: $white;
+  transition: 0.2s;
+}
+
+.show {
+  z-index: 10;
+}
+
+.show .go-top-button {
+  animation: popup 0.3s ease-in-out;
+  width: 6.6rem;
+  height: 6.6rem;
+  z-index: 11;
+}
+
+.show i {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  50% {
+    width: 8rem;
+    height: 8rem;
+  }
+  100% {
+    width: 6.6rem;
+    height: 6.6rem;
+  }
 }

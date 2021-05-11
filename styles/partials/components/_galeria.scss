@@ -1,4 +1,7 @@
-//@use '/PrimeraPaginaWeb/styles/partials/variables/variables' as *;
+@use '../variables/variables' as *;
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +64,7 @@ body {
   height: 100%;
   object-fit: fill;
   cursor: pointer;
+  animation: zoom 1s ease;
 }
 .modal #myModalImg {
   width: 50%;
@@ -88,6 +92,35 @@ body {
   cursor: pointer;
 }
 
+//  NAVEGADORES ARROWS
+.modal .left-slide,
+.modal .right-slide {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #444444;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 32px;
+  top: 40%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 40px;
+}
+.modal .left-slide:hover,
+.modal .right-slide:hover {
+  box-shadow: 0px 0px 10px black;
+  background-color: #29a8e2;
+}
+
+.modal .left-slide {
+  left: 300px;
+}
+.modal .right-slide {
+  right: 300px;
+}
+
 /** Animcacion zoom **/
 @keyframes zoom {
   from {
@@ -95,5 +128,16 @@ body {
   }
   to {
     transform: scale(1);
+  }
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }

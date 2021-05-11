@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Hotel de Campo EL BIGUA</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- https://material.io/resources/icons/?style=outline -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <!-- https://material.io/resources/icons/?style=round -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <!-- https://material.io/resources/icons/?style=sharp -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <!-- https://material.io/resources/icons/?style=twotone -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header__container">
+      <div class="header container">
+        <a href="#" class="container_logo">
+          <img
+            class="header__logotipoPNG"
+            src="/assets/img/icons/bigua-1.png"
+            alt="elbigua"
+            width="100"
+            height="100"
+          />
+          <h2 class="header__logo">Hotel de Campo El Biguá</h2>
+        </a>
+        <nav class="header__nav">
+          <a href="/index.html" class="header__nav--link"
+            >Home</a
+          >
+          <a href="/servicios.html" class="header__nav--link"
+            >Servicios</a
+          >
+          <a href="/galeria.html" class="header__nav--link"
+            >Galería</a
+          >
+          <a href="#" class="header__nav--link header__nav--activo">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <!-- fin header -->
+
+        <!-- FORMULARIO DE CONTACTO -->
+    <section class="formulario__container">
+
+      <div id="formulario" class="formulario container">
+        <div class="formulario__left">
+          
+            <div class="wrapper" id="wrapr">
+              <h2 class="wrapper--title">Formulario</h2>
+              <div id="error_message"></div>
+              <form
+                action=""
+                class="myform"
+                id="myform"
+                onsubmit="return validate();"
+              >
+                <div class="input_field">
+                  <input type="text" placeholder="Nombre" id="name" />
+                </div>
+                <div class="input_field">
+                  <input type="text" placeholder="Apellido" id="subject" />
+                </div>
+                <div class="input_field">
+                  <input type="text" placeholder="Teléfono" id="phone" />
+                </div>
+                <div class="input_field">
+                  <input type="text" placeholder="E-mail" id="email" />
+                </div>
+                <div class="input_field">
+                  <textarea placeholder="Consulta" id="message"></textarea>
+                </div>
+                <div class="btn">
+                  <input type="submit" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="formulario__right white-color">
+          <h1 class="formulario__right--title">Contactanos</h1>
+          <p class="formulario__right--text">
+            Envíanos tu consulta! Por favor, completa el siguiente formulario si
+            planeas disfrutar de una estadía y deseas consultar acerca de los
+            diferentes precios promocionales que manejamos en el Hotel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIN - FORMULARIO DE CONTACTO -->
+
+    <!-----------------FOOTER-------------->
+    <footer>
+      <div class="footer-content">
+        <h3>Hotel de Campo</h3>
+        <h3>El Biguá</h3>
+        <p>
+          <span class="material-icons-outlined">phone</span>
+          011 6091-2220
+          <span class="material-icons-outlined"> email </span>
+          reservaselbigua@gmail.com
+          <span class="material-icons-outlined"> location_on </span> Au Ezeiza,
+          Cañuelas Km 30
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="https://es-la.facebook.com/"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/?lang=es"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://photos.google.com/"
+              ><i class="fa fa-google-plus"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2021 El Biguá. designed by <span>Pany</span></p>
+      </div>
+    </footer>
+    <!-----------------FIN FOOTER-------------->
+
+    <script src="../scripts/contacto.js"></script>
+  </body>
+</html>

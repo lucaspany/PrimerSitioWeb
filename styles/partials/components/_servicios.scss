@@ -1,0 +1,75 @@
+@use '../variables/variables' as *;
+//@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffff;
+  overflow-x: hidden;
+}
+.row {
+  padding: 5rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5rem;
+  column-gap: 5%;
+}
+.area {
+  width: 50rem;
+}
+
+.services-section {
+  background-color: #232020;
+  padding-bottom: 40px;
+}
+
+.icono {
+  filter: invert(0.4) sepia(1) hue-rotate(20deg) saturate(1000%);
+}
+.services-section hr {
+  //SEPARADOR DE 4 PUNTOS ROJOS
+  border-bottom: 4px dashed #fd2034;
+  width: 42px;
+  margin-left: 0px;
+}
+.services-section .services-detail {
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  top: 0px;
+  padding: 70px 40px 60px 40px;
+  margin-top: 32px;
+  background-color: #3a35358c;
+}
+.services-section .services-detail:hover {
+  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+  top: -5px;
+  background-color: #f4f4f4;
+}
+.services-section .services-detail .fa {
+  font-size: 60px;
+  color: #f4f4f4;
+  margin-bottom: 13px;
+}
+.services-section .services-detail:hover .fa {
+  filter: #fd2034;
+}
+.services-detail h3 {
+  padding-top: 10px;
+  color: #f4f4f4;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+}
+.services-detail:hover h3 {
+  color: #333333;
+}
+.services-detail p {
+  color: #f4f4f4;
+  font-size: 15px;
+}
+.services-detail:hover p {
+  color: #333333;
+}

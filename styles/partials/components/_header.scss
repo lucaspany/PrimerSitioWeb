@@ -2,16 +2,26 @@
 
 .header__container {
   background-color: $background-color-2;
+  width: 100%; //fija el ancho del headeer a ese valor
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 0;
+  padding: 2rem 0;
+
+  &__logotipoPNG {
+    &:hover {
+      transition: all 0.9s ease;
+      -webkit-transform: scale(1);
+      transform: scale(1.2);
+    }
+  }
 
   &__logo {
     transition: all 0.4s ease-in-out;
+    font-style: italic;
 
     &:hover {
       color: yellowgreen;
@@ -19,15 +29,30 @@
   }
 
   &__nav {
+    text-shadow: $shadow;
     display: flex;
     gap: 4rem;
     margin-left: 1rem;
     &--link {
+      background: rgba(0, 0, 0, 0.699);
+      border-style: solid;
+      padding: 1rem;
+      border-radius: 100%;
+      padding: 0rem 3rem;
       transition: all 0.4s ease-in-out;
 
       &:hover {
-        color: $accent-color;
+        color: $verdeAgua-color;
       }
     }
+    &--activo {
+      color: $verdeAgua-color;
+    }
   }
+}
+.container_logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }

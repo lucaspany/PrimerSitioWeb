@@ -1,5 +1,6 @@
 @use 'partials/components/index';
 @use 'partials/variables/variables' as *;
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 
 *,
 *::before,
@@ -10,17 +11,17 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 55.5%;
 }
 
 body {
   min-height: 100vh;
-  background-color: $background-color; //$background-color;
-  color: white//$white;
+  background-color: $background-color;
+  color: white;
 }
 
 a {
-  color: white; //$white;
+  color: white;
   text-decoration: none;
   font-size: 2.3rem;
 }
@@ -46,10 +47,31 @@ h5 {
 }
 
 p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 3rem;
 }
-//ssss
+
 .container {
   max-width: 120rem;
   margin: 0 auto;
+}
+
+.accent {
+  color: $accent-color;
+}
+
+.white-color {
+  color: $white;
+  text-align: center;
+  padding-top: 40px;
+  font-family: "Amatic SC", cursive;
+  font-size: 90px;
+}
+
+.effect1 {
+  transform: translate(-100%, 50%);
+  transition: all 0.75s ease-in-out;
+}
+.effect2 {
+  transform: translate(0, 0);
 }

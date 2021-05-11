@@ -2,7 +2,7 @@
 
 .footer-content {
   background: $black;
-  height: 20vh;
+  height: 30vh;
   width: 100vw;
   font-family: "Open Sans";
   padding-top: 30px;
@@ -18,6 +18,7 @@
 .footer-content h3 {
   font-size: 1.3;
   font-weight: 400;
+  font-style: italic;
   text-transform: capitalize;
   line-height: 3rem;
 }
@@ -26,8 +27,12 @@
   min-width: 500px;
   margin: 10px auto;
   line-height: 28px;
-  font-size: 14px;
-  word-spacing: 1rem;
+  font-size: 16px;
+  word-spacing: 0.6rem;
+}
+
+.footer-content .material-icons-outlined {
+  font-size: 18px;
 }
 .socials {
   list-style: none;
@@ -56,7 +61,7 @@
 }
 
 .footer-bottom {
-  background: grey;
+  background: $background-color-3;
   width: 100vw;
   padding: 10px 0;
   text-align: center;
